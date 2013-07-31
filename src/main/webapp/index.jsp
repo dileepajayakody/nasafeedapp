@@ -108,7 +108,7 @@
 <h1 class="alert alert-success">Your app is ready!</h1>
 
 <div class="page-header">
-  <h1>Get started with Embedded Jetty</h1>
+  <h1>Get started with Heroku</h1>
 </div>
 
 <p>
