@@ -1,5 +1,7 @@
 <%@ page import="org.msc.cse.nasa.feeds.NasaFeeds" %>
-
+<%
+String query = request.getParameter("query");
+%>
 <!doctype html>
 
 <html>
