@@ -1,12 +1,5 @@
 <%@ page import="org.msc.cse.nasa.feeds.NasaFeeds" %>
-<%
-String query = request.getParameter("query");
-String result = "";
-if (query != null || !query.equals("")) {
-	result = NasaFeeds.getFeeds("saturn");
-	query = "";
-}
-%>
+
 <!doctype html>
 
 <html>
@@ -20,6 +13,6 @@ if (query != null || !query.equals("")) {
 Search Query :  <input type="text" name="query" id="query"/>
 <input type="submit" name="getfeeds" id="getfeeds" />
 </form>
-<%=result %>
+
 </body>
 </html>
