@@ -1,3 +1,4 @@
+<%@ page import="com.example.Main" %>
 <!doctype html>
 
 <html>
@@ -7,5 +8,6 @@
 
 <body>
 <h1>SWA Lab Project</h1>
+<%=Main.test(); %>
 </body>
 </html>

@@ -44,5 +44,11 @@ public class Main {
         server.start();
         server.join();   
     }
+    
+    public static String test() {
+    	return "Its Lakmali";
+    }
+    
+    
 
 }
