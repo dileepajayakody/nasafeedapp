@@ -3,7 +3,7 @@
 String query = request.getParameter("query");
 String result = "";
 if (query != null && !query.equals("")) {
-	result = NasaFeeds.getFeeds("saturn");
+	result = NasaFeeds.getFeeds(query);
 	query = "";
 }
 %>
