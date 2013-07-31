@@ -3,9 +3,6 @@ package org.msc.cse.nasa.feeds;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -23,16 +20,6 @@ public class NasaFeeds {
 			URL endpointUrl = new URL(endpoint);
 			request = (HttpURLConnection)endpointUrl.openConnection();
 			request.setRequestMethod("GET");
-			/*request.setDoOutput(true);
-			request.setRequestProperty("Content-Type",
-				      "application/x-www-form-urlencoded");
-			// Create the form content
-			OutputStream out = request.getOutputStream();
-			Writer writer = new OutputStreamWriter(out, "UTF-8");
-			writer.write("action=login&username=admin&password=admin");
-			writer.close();
-			out.close();*/
-			
 			request.connect();
 	
 			rd  = new BufferedReader(new InputStreamReader(request.getInputStream()));
