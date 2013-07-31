@@ -1,4 +1,4 @@
-package com.example;
+package org.msc.cse.nasa.feeds;
 
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.webapp.WebAppContext;

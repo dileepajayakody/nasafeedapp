@@ -1,4 +1,4 @@
-package com.example;
+package org.msc.cse.nasa.feeds;
 
 import java.io.IOException;
 import java.util.logging.Logger;
