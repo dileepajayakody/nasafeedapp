@@ -8,6 +8,6 @@
 
 <body>
 <h1>SWA Lab Project</h1>
-<%=Main.test(); %>
+<%=Main.test() %>
 </body>
 </html>
