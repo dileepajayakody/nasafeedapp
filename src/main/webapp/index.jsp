@@ -11,7 +11,7 @@ if (query != null && !query.equals("")) {
 
 <html>
 <head>
-  <title>NASA Data Feeds</title>
+  <title>NASA Data Feeds Test</title>
 </head>
 
 <body>
