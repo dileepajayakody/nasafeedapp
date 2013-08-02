@@ -53,7 +53,7 @@ Search Query :  <input type="text" name="query" id="query"/>
 	</table>
 	
 	<% Gson gson = new Gson(); %>
-	<a href="#" onclick="showResult(<%=gson.toJson(result)%>)">See Full Result</a>
+	<a href="#" onclick="showResult(eval(<%=gson.toJson(result)%>))">See Full Result</a>
 	<div id="fullresult" style="display:none">
 		 <textarea id="json"></textarea>
     	
