@@ -1,4 +1,5 @@
 <%@ page import="org.msc.cse.nasa.feeds.NasaFeeds" %>
+<%@ page import="org.msc.cse.nasa.feeds.NasaFeedResult" %>
 <%
 String query = request.getParameter("query");
 NasaFeedResult result = null;
