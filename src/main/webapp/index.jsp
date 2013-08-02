@@ -16,8 +16,7 @@ if (query != null && !query.equals("")) {
   <title>NASA Data Feeds</title>
   
   <script type="text/javascript">
-  	function showResult() {
-  		var jsonText = docoument.getElementById('jsonString');
+  	function showResult(jsonText) {
   		$('#json').val(JSON.stringify(JSON.parse(jsonText), null, 4));
   	}
   </script>
@@ -54,8 +53,7 @@ Search Query :  <input type="text" name="query" id="query"/>
 	</table>
 	
 	<% Gson gson = new Gson(); %>
-	<input type="hidden" name="jsonString" id="jsonString" value="<%=gson.toJson(result)%>"/>
-	<a href="#" onclick="showResult()">See Full Result</a>
+	<a href="#" onclick="showResult(<%=gson.toJson(result)%>)">See Full Result</a>
 	<div id="fullresult" style="display:none">
 		 <textarea id="json"></textarea>
     	
