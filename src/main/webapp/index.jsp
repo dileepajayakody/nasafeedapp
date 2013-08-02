@@ -1,5 +1,6 @@
 <%@ page import="org.msc.cse.nasa.feeds.NasaFeeds" %>
 <%@ page import="org.msc.cse.nasa.feed.result.NasaFeedResult" %>
+<%@ page import="com.google.gson.Gson" %>
 <%
 String query = request.getParameter("query");
 NasaFeedResult result = null;
@@ -13,6 +14,12 @@ if (query != null && !query.equals("")) {
 <html>
 <head>
   <title>NASA Data Feeds</title>
+  
+  <script type="text/javascript">
+  	function showResult(jsonText) {
+  		$('#json').val(JSON.stringify(JSON.parse(jsonText), null, 4));
+  	}
+  </script>
 </head>
 
 <body>
@@ -22,8 +29,8 @@ Search Query :  <input type="text" name="query" id="query"/>
 <input type="submit" name="getfeeds" id="getfeeds" />
 </form>
 
-<h3>Result Summary</h3>
 <% if (result != null) { %>
+	<h3>Result Summary</h3>
 	<table>
 	<tbody>
 		<tr>
@@ -45,9 +52,17 @@ Search Query :  <input type="text" name="query" id="query"/>
 	</tbody>
 	</table>
 	
-	<a href="">See Full Result</a>
+	<% Gson gson = new Gson(); %>
+	
+	<a href="#" onclick="showResult(<%=gson.toJson(result)%>)">See Full Result</a>
+	<div id="fullresult" style="display:none">
+		 <textarea id="json"></textarea>
+    	
+	</div>
 <%} else {%>
 
 <%}%>
 </body>
+	<script src="json2.js"></script>
+    <script src="jquery.min.js"></script>
 </html>
