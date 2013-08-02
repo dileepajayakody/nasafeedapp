@@ -42,7 +42,17 @@
 		<artifactId>junit</artifactId>
 		<version>4.8.2</version>
 		<scope>test</scope>
-	</dependency>	
+	</dependency>
+	<dependency>
+		<groupId>org.jboss.resteasy</groupId>
+		<artifactId>resteasy-jaxrs</artifactId>
+		<version>3.0.2.Final</version>
+	</dependency>
+	<dependency>
+		<groupId>org.jboss.resteasy</groupId>
+		<artifactId>resteasy-jackson-provider</artifactId>
+		<version>3.0.2.Final</version>
+	</dependency>
     </dependencies>
 
     <build>
