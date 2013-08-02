@@ -40,7 +40,7 @@ Search Query :  <input type="text" name="query" id="query"/>
 		</tr>
 		<tr>
 			<td>Pages : </td>
-			<td><%=result.setPages() %></td>
+			<td><%=result.getPages() %></td>
 		</tr>
 	</tbody>
 	</table>
